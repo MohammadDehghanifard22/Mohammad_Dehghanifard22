@@ -3,68 +3,130 @@ print("be barname mashin hesab khosh amadid..")
 print("baray bealave (+)vard konid \n tafrigh..( - ) \n zarb..( * )\n taghsim..( / ) \n darsad..( % ) \n sinos..( sin )\n tavan..( ** )\n v baray khorog as barname horof..( D ) vard konid.! ")
 def plus1():
      print("salam in barname baray (+++) ast")
-     x = int(input("enter the first number"))
-     y = int(input("enter the second number"))
-     a = int(input("enter the therd number"))
-     z = (x+y+a)
-     print (z)
-
-          
+     while 1: 
+        try:
+         x = int(input("enter the first number:"))
+         y = int(input("enter the second number:"))
+         a = int(input("enter the therd number:"))
+        except ValueError:
+           print("plase enter corect number..!")
+           continue
+        z = (x+y+a)
+        print (z)
+        done_or_not=input("for plus again write (A) for exit(E):")
+        if done_or_not =="A" or "a":
+           continue         
+        else:
+            break
 def mines1():
      print("salam in barname baray (---) ast")
-     x = int(input("enter the first number"))
-     y = int(input("enter the second number"))
-     a = int(input("enter the therd number"))
-     z = (x-y-a)
-     print (z)
+     while 1:
+      try:    
+       x = int(input("enter the first number:"))
+       y = int(input("enter the second number:"))
+       a = int(input("enter the therd number:"))
+       
+      except ValueError:
+           print("plase enter corect number..!")
+           continue
+      z = (x-y-a)
+      print (z)
+      done_or_not=input("for mines again write (A) for exit(E):")
+      if done_or_not == "A" or "a":
+           continue
+      else :
+           break
     
     
 def zarb1():
      print("salam in barname baray (xxx) ast")
-     x = int(input("enter the first number"))
-     y = int(input("enter the second number"))
-     a = int(input("enter the therd number"))
-     z = (x*y*a)
-     print (z)
+     while 1:
+      try: 
+       x = int(input("enter the first number:"))
+       y = int(input("enter the second number:"))
+       a = int(input("enter the therd number:"))
+      except ValueError:
+           print("plase enter corect number..!")
+           continue
+      z = (x*y*a)
+      print (z)
+      done_or_not=input("for zarb again write (A) for exit(E):")
+      if done_or_not == "A" or "a":
+           continue
+      else :
+            break
  
 def taghsim():
      print("salam in barname baray (///) ast")
-     x = int(input("enter the first number"))
-     y = int(input("enter the second number"))
-     a = int(input("enter the therd number"))
-     z = (x/y/a)
-     print (z)     
-    
+     while 1: 
+      x = int(input("enter the first number:"))
+      y = int(input("enter the second number:"))
+      a = int(input("enter the therd number:"))
+      z = (x/y/a)
+      print (z)     
+      done_or_not=input("for plus again write (A) for exit(E):")
+      if done_or_not == "A" or "a":
+           continue
+      else :
+           break
     
 def percent1():
- while 1:    
-     x = int(input("enter the total price :"))
+ while 1:
+     try:     
+      x = int(input("enter the total price :"))
+      y = float(input("enter the percent : "))
+     except ValueError:          
+          print("plase enter corect number..!")
+          continue
      if x<=0:
           print ("plase enter corect price..!")
           continue
-     y = float(input("enter the percent : "))
      z = (x*y)/100
      print (z)
-     
+     done_or_not=input("for pecent again write (A) for exit(E):")
+     if done_or_not == "A" or "a":
+           continue
+     else :
+           break
      
      
 def sin():
-     x = int(input("enter the number for sin :"))
-     z = math.sin(x)
-     print(z)
+     while 1:
+      try:
+           x = int(input("enter the number for sin :"))
+      except ValueError:
+           print("plase enter corect number..!")
+           continue
+      z = math.sin(x)
+      print(z)
+      done_or_not=input("for sin again write (A) for exit(E):")
+      if done_or_not == "A" or "a":
+           continue
+      else :
+           break
   
 
 def tavan():
-  x = (int(input("adad paye shoma chand ast..?")))
-  z = (int(input("tavan chand mikhayd ..?")))
-  while 1:
-       if z < 0:
-           print("dorost vared konid" )
+  while 1: 
+    try:
+       x = (int(input("adad paye shoma chand ast..?")))
+       z = (int(input("tavan chand mikhayd ..?")))
+       
+    except ValueError:
+       print("plase enter corect number..!")
+       continue
+    if z < 0 :
+        print("dorost vared konid" )
+        continue
+    else:
+        y = (pow(x,z))
+        print(x, "be tavan 2 mishe :" , y) 
+     
+    done_or_not=input("for plus again write (A) for exit(E):")
+    if done_or_not == "A" or "a":
            continue
-       else:
-           y = (pow(x,z))
-           print(x, "be tavan 2 mishe .." , y) 
-           break
+    else :
+           break   
 
 
 def karbar():
